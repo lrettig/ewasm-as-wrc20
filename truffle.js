@@ -23,10 +23,21 @@ module.exports = {
 	  contractName: "ewasm-as-wrc20"
 	},
 	fileProperties: {
-	  bytecode: "build/untouched.wasm"
+	  bytecode: "build/untouched.wasm",
+          sourceMap: "build/untouched.wasm.map",
+          source: "build/untouched.wat"
 	}
       }]
     }
+  },
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 8545,
+      from: 'efadf166849f06eee4b44ddb78e4162580f436b1',
+      network_id: '*',
+      verbose: 1
+    },
   }
 };
 
